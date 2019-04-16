@@ -1,3 +1,4 @@
+; DO NOT delete or move this file
 ; Declare standard file descriptors
 %define	stdin	0
 %define stdout	1
@@ -24,6 +25,12 @@ access.the.bsd.kernel
 ; Create macro for each syscal
 %macro	sys.exit	0
 		system	SYS_exit
+%endmacro
+%macro	sys.fork	0
+		system	SYS_fork
+%endmacro
+%macro	sys.read	0
+		system	SYS_read
 %endmacro
 %macro	sys.write	0
 		system	SYS_write
