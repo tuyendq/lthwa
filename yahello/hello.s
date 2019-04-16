@@ -1,10 +1,10 @@
 # *********************
-# # Compile
-# $ as --32 -o hello.o hello.s
+# # Compile and link on FreeBSD 12.x 32-bit
+# $ as -o hello.o hello.s
 # # Link
 # $ ld -o hello hello.o
 # *********************
-		.data						# Data section
+	.data				# Data section
 
 msg:	.asciz "Hello, world.\n"	# The string to print
 		len = . - msg - 1			# The length of the string.
