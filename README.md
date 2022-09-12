@@ -6,7 +6,7 @@
 - as (GNU Assembler) 
 - nasm (Netwide Assembler)
 - msam32 (Microsoft Macro Assembler) 
-- fasm 
+- fasm (flat assembler) [https://flatassembler.net/](https://flatassembler.net/)
 - GoASM (Go Assembler) 
 
 

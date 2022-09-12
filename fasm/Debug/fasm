@@ -1,0 +1,26 @@
+format PE console
+entry start
+
+define _EC_2_ 1
+define DEBUG 1
+define CHARSIZE 1
+define FASM_COMPILER 1
+define APP_WIN32 1
+NTDDI_VERSION equ 003000000H
+
+include 'WIN32AX.INC'
+section '.idata' import data readable
+library kernel32, 'kernel32.dll',\
+user32, 'user32.dll',\
+comctl32, 'comctl32.dll'
+include 'windows.inc'
+include 'kernel32.inc'
+include 'user32.inc'
+include 'comctl32.inc'
+include 'ECFasm32.asm'
+include 'ECExterns.inc'
+include 'fasmRes.inc'
+
+align 4
+
+include 'fasm.asm'
